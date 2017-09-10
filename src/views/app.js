@@ -22,7 +22,9 @@ var AppView = Backbone.View.extend({
     }).render();
 
     new SearchView({
-      el: this.$('.search')
+      el: this.$('.search'),
+      model:this.videos.at(0),
+      collection: this.videos
     }).render();
 
     return this;
